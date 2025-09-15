@@ -5,10 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/4f9804b481.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <section class="header">
-        
+        <nav>
+            <a href="index.html">LOGO</a>
+            <div class="nav-links" id="navLinks">
+            <i class="fa fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    <div class="text-box">
+        <h1>Hi there! my name is Yulia</h1>
+        <p>I am a computer science student interested in creating practical and aesthetic solutions.</p>
+        <a href="" class="hero-btn">about me</a>
+    </div>
     </section>
+
+    <!-- projects -->
+    <section class="projects">
+        <h1>Highlighted projects</h1>
+        <p>some projects ive done...</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>Python game</h3>
+                <p>here it is</p>
+            </div>
+            <div class="course-col">
+                <h3>SQL</h3>
+                <p>here it is</p>
+            </div>            
+            <div class="course-col">
+                <h3>MD</h3>
+                <p>here it is</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- work experience -->
+    
+    <section class="work">
+        <h1>Highlighted work</h1>
+        <p>some work ive done...</p>
+
+        <div class="row">
+            <div class="work-col">
+                <img src="img/computer-keyboard-with-enter-button.jpg" alt="">
+                <div class="layer">
+                    <h3>Research</h3>
+                </div>
+            </div>
+            <div class="work-col">
+                <img src="img/computer-keyboard-with-enter-button.jpg" alt="">
+                <div class="layer">
+                    <h3>Software testing</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- js for toggle menu -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
 </body>
 </html>
