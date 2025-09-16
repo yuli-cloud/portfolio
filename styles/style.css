@@ -33,32 +33,37 @@ nav img{
     width: 150px;
 }
 
-.nav-links{
+.nav-links {
     flex: 1;
     text-align: right;
-    pointer-events: auto;
 }
 
-.nav-links ul li{
+.nav-links ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links ul li {
     display: inline-block;
-    padding: 8px 12px;
-    position: relative;
+    margin: 0 8px; /* spacing between buttons */
 }
 
-.nav-links ul li a{
+.nav-links ul li a {
+    display: inline-block;           /* makes the whole area clickable */
+    padding: 10px 18px;              /* bigger click area */
     color: white;
-    text-decoration: none;
     font-size: 16px;
-    z-index: 2;
+    text-decoration: none;
+    border-radius: 6px;              /* rounded corners */
+    transition: background 0.3s ease;
 }
 
-.nav-links ul li a:hover{
-    text-decoration-line: underline;
-    text-decoration-style: solid;
-    text-decoration-color: white;
-    text-decoration-thickness: 1px;
+.nav-links ul li a:hover {
+    background: rgba(255, 255, 255, 0.2); /* highlight effect */
+    text-decoration: none;                /* keep it clean */
 }
+
 
 .text-box{
     width: 90%;
