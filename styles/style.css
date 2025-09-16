@@ -52,8 +52,11 @@ nav img{
     font-size: 16px;
 }
 
-.nav-links ul li:hover{
-    text-decoration: overline;
+.nav-links ul li a:hover{
+    text-decoration-line: overline;
+    text-decoration-style: solid;
+    text-decoration-color: white;
+    text-decoration-thickness: 1px;
 }
 
 .text-box{
