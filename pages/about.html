@@ -31,6 +31,20 @@
         <h1>About Me</h1>
     </div>
     </section>
+    <!-- scroll nav -->
+<div class="scroll-nav" id="scrollNav">
+    <a href="https://www.linkedin.com/in/yulia-bobkova-yb/" class="scroll-linkedin">
+        <i class="fa-brands fa-square-linkedin" style="font-size: xx-large; color: black"></i>
+    </a>
+    <div class="nav-links">
+        <ul id="scrollNavLinks">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Résumé</a></li>
+            <li><a href="mailto:ybobkova.yb@gmail.com">Contact</a></li>
+        </ul>
+    </div>
+</div>
 
     <!-- about section -->
     <section class="projects">
@@ -101,6 +115,16 @@
         function hideMenu(){
             navLinks.style.right = "-200px";
         }
+
+        const scrollNav = document.getElementById("scrollNav");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 500) {   // adjust trigger point
+            scrollNav.classList.add("active");
+            } else {
+        scrollNav.classList.remove("active");
+        }
+  });
     </script>
 </body>
 </html>

@@ -22,11 +22,13 @@
     position: relative;
 }
 
+
 nav{
     display: flex;
     padding: 2% 6%;
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
 }
 
 nav img{
@@ -36,6 +38,7 @@ nav img{
 .nav-links {
     flex: 1;
     text-align: right;
+    z-index: 5;
 }
 
 .nav-links ul {
@@ -46,17 +49,20 @@ nav img{
 
 .nav-links ul li {
     display: inline-block;
-    margin: 0 8px; /* spacing between buttons */
+    margin: 0 8px;
+    vertical-align: middle; /* keeps them aligned nicely */
 }
 
+
 .nav-links ul li a {
-    display: inline-block;           /* makes the whole area clickable */
-    padding: 10px 18px;              /* bigger click area */
+    display: block;          /* fills parent <li> */
+    padding: 20px 18px;      /* increases clickable height */
     color: white;
     font-size: 16px;
     text-decoration: none;
-    border-radius: 6px;              /* rounded corners */
+    border-radius: 6px;
     transition: background 0.3s ease;
+    line-height: 1;          /* avoids weird extra spacing */
 }
 
 .nav-links ul li a:hover {
@@ -73,6 +79,7 @@ nav img{
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    z-index: 1; /* keep it under nav */
 }
 
 .text-box h1{
@@ -144,6 +151,11 @@ nav .fa{
 
     .row{
         flex-direction: column;
+    }
+    .scroll-nav {
+        opacity: 0 !important;
+        pointer-events: none !important;
+        display: none !important;
     }
 }
 
@@ -308,4 +320,61 @@ b{
 
 .about-box{
     max-width: fit-content;
+}
+
+.scroll-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  display: flex;                 
+  justify-content: space-between; /* same as top nav */
+  align-items: center;                          
+  padding: 0.5% 6%;                 /* same padding as top nav */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 999;
+  box-sizing: border-box;
+box-shadow: 0 4px 8px rgba(0,0,0,0.2);  /* subtle drop shadow */
+}
+
+.scroll-nav.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.scroll-nav .nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.scroll-nav .nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.scroll-nav .nav-links ul li {
+  display: inline-block;
+  margin: 0 8px;      /* same spacing as top nav */
+  vertical-align: middle;
+}
+
+.scroll-nav .nav-links ul li a {
+  display: block;
+  padding: 20px 18px;  /* same as top nav */
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  line-height: 1;
+}
+
+.scroll-nav .nav-links ul li a:hover {
+  /* background: rgba(0, 0, 0, 0.1);  */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);  /* subtle drop shadow */
+  text-decoration: none;
 }
