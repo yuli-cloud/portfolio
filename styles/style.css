@@ -36,6 +36,7 @@ nav img{
 .nav-links{
     flex: 1;
     text-align: right;
+    pointer-events: auto;
 }
 
 .nav-links ul li{
@@ -58,7 +59,7 @@ nav img{
     background: white;
     display: block;
     margin: auto;
-    transition: 0.5s;
+    transition: 0.1s;
 }
 
 .nav-links ul li:hover::after{
