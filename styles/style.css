@@ -188,21 +188,21 @@ h1{
 }
 
 .project-col-1st{
-    background-image: linear-gradient(rgba(4, 9, 30,0.7), rgba(4, 9, 30,0.7)), url(../img/tobias-fischer-PkbZahEG2Ng-unsplash.jpg);
+    background-image: linear-gradient(rgba(4, 9, 30,0.8), rgba(4, 9, 30,0.8)), url(../img/tobias-fischer-PkbZahEG2Ng-unsplash.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
 }
 
 .project-col-2nd{
-    background-image: linear-gradient(rgba(4, 9, 30,0.7), rgba(4, 9, 30,0.7)), url(../img/brandi-redd-aJTiW00qqtI-unsplash.jpg);
+    background-image: linear-gradient(rgba(4, 9, 30,0.8), rgba(4, 9, 30,0.8)), url(../img/brandi-redd-aJTiW00qqtI-unsplash.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
 }
 
 .project-col-3rd{
-    background-image: linear-gradient(rgba(4, 9, 30,0.7), rgba(4, 9, 30,0.7)), url(../img/computer-keyboard-with-enter-button.jpg);
+    background-image: linear-gradient(rgba(4, 9, 30,0.8), rgba(4, 9, 30,0.8)), url(../img/computer-keyboard-with-enter-button.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
